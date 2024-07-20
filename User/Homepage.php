@@ -107,7 +107,8 @@
                         <div class="carousel-caption relative">
                             <span>The Ultimate Shopping Companion </span>
                             <h1>Stay Ahead with the Best Mobile Technology!</h1>
-                            <p></p>
+                            <p>"Discover the Best Phones at the Best Prices!
+                            Compare Features and Make Informed Choices"</p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
