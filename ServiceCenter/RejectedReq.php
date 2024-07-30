@@ -1,5 +1,6 @@
 <?php
 include('../Assets/Connection/Connection.php');
+session_start();
 include('Header.php');
 if(isset($_GET["acpID"]))
 {

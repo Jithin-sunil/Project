@@ -13,7 +13,7 @@ if($result->num_rows>0)
 		
 		
 		
-		$selqry="select * from tbl_cart where booking_id='".$bid."' and product_id='".$_GET["id"]."'";
+		$selqry="select * from tbl_cart where booking_id='".$bid."' and mobile_id='".$_GET["id"]."'";
 		//echo $selqry;
 		$result=$con->query($selqry);
 		if($result->num_rows>0)
@@ -24,7 +24,7 @@ if($result->num_rows>0)
 		else
 		{
 		
-		 $insQry1="insert into tbl_cart(product_id,booking_id)values('".$_GET["id"]."','".$bid."')";
+		 $insQry1="insert into tbl_cart(mobile_id,booking_id)values('".$_GET["id"]."','".$bid."')";
          if($con->query($insQry1))
           { 
              echo "Added to Cart";
@@ -52,7 +52,7 @@ $insQry=" insert into tbl_booking(user_id,booking_date)values('".$_SESSION["uid"
 					$bid=$row["id"];
 					
 					
-					$selqry="select * from tbl_cart where booking_id='".$bid."'and product_id='".$_GET["id"]."'";
+					$selqry="select * from tbl_cart where booking_id='".$bid."'and mobile_id='".$_GET["id"]."'";
 		$result=$con->query($selqry);
 		if($result->num_rows>0)
 		{
@@ -63,7 +63,7 @@ $insQry=" insert into tbl_booking(user_id,booking_date)values('".$_SESSION["uid"
 		{
 					
 					
-	                   $insQry1="insert into tbl_cart(product_id,booking_id)values('".$_GET["id"]."','".$bid."')";
+	                   $insQry1="insert into tbl_cart(mobile_id,booking_id)values('".$_GET["id"]."','".$bid."')";
                         if($con->query($insQry1))
                         { 
                           echo "Added to Cart";

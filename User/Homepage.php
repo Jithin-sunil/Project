@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,10 +73,12 @@
                 
                                         <li><a href="MobileComparison.php">Mobile Comparison</a></li>
                                         <li><a href="MyProfile.php">MyProfile</a></li>
-                                        <li><a href="PhoneSelling.php">Phone Selling</a></li>
-                                        <li><a href="UsedPhones.php">Used Phones</a></li>
+                                        <li><a href="UsedPhone.php">Phone Selling</a></li>
+                                        <li><a href="ViewUsedPhone.php">Buy Used Phones</a></li>
                                         <li><a href="Servicebooking.php">Service Center</a></li>
                                         <li><a href="MyBooking.php">My Booking</a></li>
+                                        <li><a href="UsedPhoneBookings.php">Used Phone Booking</a></li>
+                                        <li><a href="MyPhone_sell.php">MyPhone</a></li>
                                         <li><a href="Mycart.php">My Cart</a></li>
                                         <li class="last">
                                             <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
@@ -83,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 offset-md-6">
+                    <!--<div class="col-md-6 offset-md-6">
                         <div class="location_icon_bottum">
                             <ul>
                                 <li><img src="../Assets/Templates/Main/icon/call.png" />(+71)9876543109</li>
@@ -91,7 +96,7 @@
                                 <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>
+                    </div>--> 
                 </div>
             </div>
         </div>
@@ -105,10 +110,8 @@
                     <img class="first-slide" src="../Assets/Templates/Main/images/banner.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption relative">
-                            <span>The Ultimate Shopping Companion </span>
-                            <h1>Stay Ahead with the Best Mobile Technology!</h1>
-                            <p>"Discover the Best Phones at the Best Prices!
-                            Compare Features and Make Informed Choices"</p>
+                        <span> Your Gateway<br>To the latest In<br>Mobile Technology</span>
+                        <p>"Innovative Mobiles,Unbeatable Prices"</p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -122,8 +125,10 @@
                     <img class="second-slide" src="../Assets/Templates/Main/images/banner.jpg" alt="Second slide">
                     <div class="container">
                         <div class="carousel-caption relative">
-                            <span> Your Gateway<br>To the latest In<br>Mobile Technology</span>
-                            <p>"Innovative Mobiles,Unbeatable Prices"</p>
+                            <span>The Ultimate Shopping Companion </span>
+                            <h1>Stay Ahead with the Best Mobile Technology!</h1>
+                            <p>"Discover the Best Phones at the Best Prices!
+                            Compare Features and Make Informed Choices"</p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>

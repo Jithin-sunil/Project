@@ -233,7 +233,7 @@ $(document).ready(function(){
 		var product_id = $('#txt_pid').val();
 		
         $.ajax({
-            url:"../Assets/AjaxPages/AjaxRating.php",
+            url:"../Assets/Ajax/AjaxRating.php",
             method:"POST",
             data:{action:'load_data',pid:product_id},
             dataType:"JSON",

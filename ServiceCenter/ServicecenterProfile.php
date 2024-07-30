@@ -1,6 +1,6 @@
 <?php
 include('../Assets/Connection/Connection.php');
-
+session_start();
 include('Header.php');
 
  $selquery="select * from tbl_servicecenter u inner join tbl_place p on u.place_id=p.place_id inner join tbl_district d on p.district_id=d.district_id	 where servicecenter_id='".$_SESSION['sid']."'";

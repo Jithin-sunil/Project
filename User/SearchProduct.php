@@ -11,6 +11,7 @@ include("../Assets/Connection/Connection.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LuckysMart::Search Product</title>
 <link rel="stylesheet" href="../Assets/Templates/Search/bootstrap.min.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 <style>
             .custom-alert-box{
 				z-index:1;

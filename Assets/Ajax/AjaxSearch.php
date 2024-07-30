@@ -23,7 +23,7 @@ include("../Connection/Connection.php");
   Disply:<?php echo $rows['mobiledetails_display'] ?><br>
   Front Cam:<?php echo $rows['mobiledetails_frontcam'] ?><br>
   Back Cam:<?php echo $rows['mobiledetails_rearcam'] ?><br>
-  <a href="#" onclick="addCart(<?php echo $rows['mobiledetails_id']?>)">Add to cart</a>
+  <a href="#" onclick="addCart(<?php echo $rows['mobile_id']?>)">Add to cart</a>
 
   
   </td>

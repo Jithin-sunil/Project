@@ -1,5 +1,6 @@
 <?php
 include('../Assets/Connection/Connection.php');
+session_start();
 include('Header.php');
 
 $selquery="select * from tbl_servicecenter where servicecenter_id='".$_SESSION['sid']."'";

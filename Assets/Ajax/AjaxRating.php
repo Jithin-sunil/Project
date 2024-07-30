@@ -2,10 +2,11 @@
 
 //submit_rating.php
 include("../Connection/Connection.php");
+
 if(isset($_POST["rating_data"]))
 {
 
-	$ins = "INSERT INTO tbl_review(user_name,user_rating,user_review,review_datetime,mobiledetails_id)VALUES('".$_POST["user_name"]."','".$_POST["rating_data"]."','".$_POST["user_review"]."',NOW(),'".$_POST["product_id"]."')";
+	$ins = "INSERT INTO tbl_review(user_name,user_rating,user_review,review_datetime,mobile_id)VALUES('".$_POST["user_name"]."','".$_POST["rating_data"]."','".$_POST["user_review"]."',NOW(),'".$_POST["product_id"]."')";
 	
 	if($con->query($ins))
 {
@@ -31,7 +32,7 @@ if(isset($_POST["action"]))
 	$review_content = array();
 
 	$query = "
-	SELECT * FROM tbl_review where product_id = '".$_POST["pid"]."' ORDER BY review_id DESC
+	SELECT * FROM tbl_review where mobile_id = '".$_POST["pid"]."' ORDER BY review_id DESC
 	";
 
 	$result = $con->query($query);

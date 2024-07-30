@@ -26,7 +26,7 @@ include('Header.php');
         </tr>
         <tr>
 		 <?php
-		$selqurey="select * from tbl_cart r  inner join tbl_mobiledetails c on r.product_id=c.mobiledetails_id inner join tbl_booking o on r.booking_id=o.booking_id where user_id='".$_SESSION['uid']."' " ;
+		$selqurey="select * from tbl_cart r  inner join tbl_mobile m on r.mobile_id=m.mobile_id inner join tbl_mobiledetails  c on m.mobile_id=c.mobile_id inner join tbl_booking o on r.booking_id=o.booking_id where user_id='".$_SESSION['uid']."' " ;
 		 $result=$con->query($selqurey);
         $i=0;
         while($data=$result->fetch_assoc())
@@ -40,42 +40,44 @@ include('Header.php');
             <td><?php echo $data["cart_quantity"]?></td>
              <td><?php echo $data["booking_date"]?></td>
            
-             <td><?php 
-					if($data["booking_status"]==1 && $data["cart_status"]==1)
+             <td>
+    <?php 
+	      if($data["booking_status"]==1 && $data["cart_status"]==1)
 					{
-						echo "payment pending....";
-					}
-					else if($data["booking_status"]==2 && $data["cart_status"]==1)
-					{
-						
 						?>
-                        payment completed /
-                        <!-- <a href="Viewuserbooking.php?cid=<?php echo $data ["cart_id"];?>&sts=3">Pack product</a> -->
+                        payment Pending 
                         <?php 
 					}
-					else if($data["booking_status"]==2  && $data["cart_status"]==3)
+					else if($data["booking_status"]==2 && $data["cart_status"]==2)
 					{
 						?>
-                        product packed /
-                        <!-- <a href="Viewuserbooking.php?cid=<?php echo $data ["cart_id"];?>&sts=4">Ship Product</a> -->
+                      Payement Completed
+                      
+                        <?php 
+					}
+					else if($data["booking_status"]==2 && $data["cart_status"]==3)
+					{
+						?>
+                       Product Packed
+                      
                         <?php 
 					}
 					else if($data["booking_status"]==2 && $data["cart_status"]==4)
 					{
 						?>
-                        product shipped /
-                        <!-- <a href="Viewuserbooking.php?cid=<?php echo $data ["cart_id"];?>&sts=5">Product Delivered</a> -->
+                      Product Shipped
                         <?php 
 					}
 					else if($data["booking_status"]==2 && $data["cart_status"]==5)
 					{
 						?>
-                       Order Completed 
-					   <a href="Rating.php?pid=<?php echo $data['product_id']?>">Rating</a>
+                           Order Completed /
+                           <a href="Rating.php?pid=<?php echo $data["mobile_id"]; ?>">Review</a>/
+                           <!-- <a href="bill.php?id=<?php echo $data["cart_id"]; ?>">Bill</a> -->
                         <?php 
 					}
 					?>
-			</td>
+                    </td>
             </tr>
             <?php
             } 

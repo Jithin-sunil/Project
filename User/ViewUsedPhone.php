@@ -2,6 +2,20 @@
 include('../Assets/Connection/Connection.php');
 include('Header.php');
 
+if(isset($_GET['bookID']))
+{
+  $ins="insert into tbl_buyusedphone (buyer_id,usedphone_id,buydate) values('".$_SESSION['uid']."','".$_GET['bookID']."',curdate())";
+  if($con->query($ins))
+  {
+    ?>
+    <script>
+      alert('Booked')
+      window.location="ViewUsedPhone.php";
+    </script>
+    <?php
+  }
+}
+
 ?>
 
 
@@ -22,7 +36,7 @@ include('Header.php');
        <td>Price</td>
        <td>Mobile booking</td>
 <?php
-$selquery="select * from tbl_usedphone";
+ $selquery="select * from tbl_usedphone where user_id!=".$_SESSION['uid'];
 $result=$con->query($selquery);
 $i=0;
 while($data = $result -> fetch_assoc())

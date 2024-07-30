@@ -38,7 +38,7 @@ if(isset($_GET["cid"]))
 
 </tr>
 <?php
-$selquery="select * from tbl_booking b inner join tbl_cart c on b.booking_id=c.booking_id inner join tbl_mobiledetails m on c.product_id=m.mobiledetails_id inner join tbl_mobile mo on mo.mobile_id=m.mobile_id inner join tbl_user u on b.user_id=u.user_id where mo.company_id='".$_SESSION['company_id']."' ";
+$selquery="select * from tbl_booking b inner join tbl_cart c on b.booking_id=c.booking_id inner join tbl_mobile mo on c.mobile_id=mo.mobile_id inner join tbl_mobiledetails m on mo.mobile_id=m.mobile_id  inner join tbl_user u on b.user_id=u.user_id where mo.company_id='".$_SESSION['company_id']."' ";
 $result=$con->query($selquery);
 $i=0;
 while($data = $result -> fetch_assoc())
@@ -59,7 +59,7 @@ while($data = $result -> fetch_assoc())
 					{
 						echo "payment pending....";
 					}
-					else if($data["booking_status"]==2 && $data["cart_status"]==1)
+					else if($data["booking_status"]==2 && $data["cart_status"]==2)
 					{
 						
 						?>

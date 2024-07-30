@@ -1,9 +1,7 @@
 <?php
 
-
+session_start();
 include("../Assets/Connection/Connection.php");
-include('Header.php');
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -323,7 +321,7 @@ include('Header.php');
                 $upQry1 = "update tbl_booking set booking_date=curdate(),booking_amount='".$amt."',booking_status='1' where user_id='" .$_SESSION["uid"]. "'";
 				$con->query($upQry1);
 				
-				 $upQry1 = "update tbl_cart set  cart_date=curdate(),cart_status='1' where booking_id='" .$row["booking_id"]. "'";
+				 $upQry1 = "update tbl_cart set cart_status='1' where booking_id='" .$row["booking_id"]. "'";
                 if($con->query($upQry1))
                 {
 					
@@ -358,7 +356,11 @@ include('Header.php');
 
     ?>
     <body onload="recalculateCart()" style="padding:0px">
+    
+    <?php
+    ob_start();
    
+    ?>
     <br><br><br><br><br>
     <div style="padding: 30px;" align="center">
         <h1>Cart</h1>
@@ -377,29 +379,33 @@ include('Header.php');
             $sel = "select * from tbl_booking b inner join tbl_cart c on c.booking_id=b.booking_id where b.user_id='" .$_SESSION["uid"]. "' and booking_status='0' and cart_status=0";
             $res = $con->query($sel);
                 while ($row=$res->fetch_assoc()) {
-                    $selPr = "select * from tbl_mobiledetails where mobiledetails_id='" .$row["product_id"]. "'";
+                    $selPr = "select * from tbl_mobiledetails m inner join tbl_mobile p on m.mobile_id=p.mobile_id where p.mobile_id ='" .$row["mobile_id"]. "'";
                     $respr = $con->query($selPr);
                     if ($rowpr=$respr->fetch_assoc()) {
-                       
+                        $selstock = "select sum(stock_quantity) as stock from tbl_stock where mobile_id ='".$rowpr["mobile_id"]."'";
+						$selstock1="select sum(cart_quantity) as quantity from tbl_cart where mobile_id ='".$rowpr["mobile_id"]."' and cart_status >'0'";
+						$chk=$con->query($selstock1)->fetch_assoc();
+                        $resst = $con->query($selstock);
+                    if ($rowst=$resst->fetch_assoc()) {
             ?>
 
             <div class="product">
                 <div class="product-image">
-                    <img
-                        src="../Assets/Files/MobileDocs/<?php echo $rowpr["mobiledetails_photo"] ?>"
-                        />
+                    <!-- <img
+                        src="../Assets/Files/Spareparts/Photo/<?php echo $rowpr["spareparts_photo"] ?>"
+                        /> -->
                 </div>
                 <div class="product-details">
                     <div class="product-title"><?php echo $rowpr["mobiledetails_name"] ?></div>
                     <p class="product-description">
-                    <!--<?php echo $rowpr["product_details"] ?>-->
+                    <!-- <?php echo $rowpr["product_details"] ?> -->
                     </p>
                 </div>
                 <div class="product-price "	><?php echo $rowpr["mobiledetails_price"] ?></div>
                 <div class="product-quantity">
                 <select id="<?php echo $row["cart_id"]?>" style="width:90px">
                 	<?php
-					for ($k=1;$k<=10;$k++)
+					for ($k=1;$k<=($rowst["stock"]-$chk["quantity"]);$k++)
 					{
 						?>
                         <option <?php if($row["cart_quantity"]==$k){ echo "selected";} ?> value="<?php echo $k ?>"><?php echo $k ?></option>
@@ -424,7 +430,7 @@ include('Header.php');
                     }
                 }
               
-                
+                }
             ?>
 
             <div class="totals">
@@ -451,8 +457,10 @@ include('Header.php');
         </div>
 </form>
         <!-- partial -->
-        <script src="../Assets/JQ/JQuery.js"></script>
+        <script src="../Assets/JQ/jQuery.js"></script>
         <script>
+
+        recalculateCart();
         /* Set rates + misc */
         var fadeTime = 300;
 
@@ -466,6 +474,8 @@ include('Header.php');
 
         });
 
+        
+
         $(".product-removal button").click(function() {
 
             $.ajax({
@@ -474,15 +484,18 @@ include('Header.php');
             removeItem(this);
         });
 
+
         /* Recalculate cart */
         function recalculateCart() {
             var subtotal = 0;
+           
 
             /* Sum up row totals */
             $(".product").each(function() {
                 subtotal += parseFloat(
                         $(this).children(".product-line-price").text()
                         );
+                        console.log($(this).children(".product-line-price").text())
             });
 
             /* Calculate totals */
@@ -498,7 +511,9 @@ include('Header.php');
                     $(".checkout").fadeIn(fadeTime);
                 }
                 $(".totals-value").fadeIn(fadeTime);
+                
             });
+            
         }
 
         /* Update quantity */
@@ -539,8 +554,8 @@ include('Header.php');
         </script>
     </div>
     </body>
-   
+    <?php
+    
+    ob_flush();
+    ?>
 </html>
-<?php
-include('Footer.php');
-?>
