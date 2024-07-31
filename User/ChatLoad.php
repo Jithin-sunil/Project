@@ -6,12 +6,12 @@ session_start();
 
 
 
- $selQry = "select * from tbl_chat c inner join tbl_user u on (u.user_id=c.chat_touid) or (u.user_id=c.chat_fromuid) where u.user_id='".$_SESSION["uid"]."' order by chat_datetime";
+ $selQry = "select * from tbl_chat c inner join tbl_user u on (u.user_id=c.to_userid) or (u.user_id=c.from_userid) where u.user_id='".$_SESSION["uid"]."' order by chat_datetime";
     $rowdis=$con->query($selQry);
      while($datadis=$rowdis->fetch_assoc())
   
     {
-        if ($datadis["chat_frombid"]==$_GET["id"]) {
+        if ($datadis["from_userid"]==$_GET['id']) {
 
             $selQry1= "select * from tbl_user where user_id ='".$_GET["id"]."'";
     $rowdis1=$con->query($selQry1);
@@ -22,7 +22,7 @@ session_start();
 ?>
 
 <div class="chat-message is-received">
-    <img src="../Assets/Files/UserDocs/Photo/<?php echo $datadis1["user_photo"] ?>" alt="">
+    <img src="../Assets/Files/UserDocs/<?php echo $datadis1["user_photo"] ?>" alt="">
     <div class="message-block">
         <span><?php echo $datadis1["user_name"] ?></span>
         <div class="message-text"><?php echo $datadis["chat_content"] ?></div>
@@ -39,7 +39,7 @@ session_start();
     
 ?>
 <div class="chat-message is-sent">
-    <img src="../Assets/Files/UserDocs/Photo/<?php echo $datadis["user_photo"] ?>" alt="">
+    <img src="../Assets/Files/UserDocs/<?php echo $datadis["user_photo"] ?>" alt="">
     <div class="message-block">
         <span><?php echo $datadis["user_name"] ?></span>
         <div class="message-text"><?php echo $datadis["chat_content"] ?></div>

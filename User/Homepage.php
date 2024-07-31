@@ -79,6 +79,7 @@ session_start();
                                         <li><a href="MyBooking.php">My Booking</a></li>
                                         <li><a href="UsedPhoneBookings.php">Used Phone Booking</a></li>
                                         <li><a href="MyPhone_sell.php">MyPhone</a></li>
+                                        <li><a href="ChatList.php">Chat List</a></li>
                                         <li><a href="Mycart.php">My Cart</a></li>
                                         <li class="last">
                                             <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>

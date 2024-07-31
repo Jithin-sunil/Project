@@ -42,7 +42,7 @@ if(isset($_GET['bid']))
         </tr>
         <tr>
             <?php
-		$selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on u.user_id=r.user_id where r.user_id=".$_SESSION['uid'];
+		 $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on b.buyer_id=r.user_id where u.user_id=".$_SESSION['uid'];
 		 $result=$con->query($selqurey);
         $i=0;
         while($data=$result->fetch_assoc())

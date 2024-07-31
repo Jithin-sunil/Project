@@ -44,15 +44,14 @@ include('Header.php');
     <?php 
 	      if($data["booking_status"]==1 && $data["cart_status"]==1)
 					{
-						?>
-                        payment Pending 
-                        <?php 
+						echo "Payment Pending"; 
 					}
-					else if($data["booking_status"]==2 && $data["cart_status"]==2)
+					else if($data["booking_status"]==2 && $data["cart_status"]==1)
 					{
+                        echo " Payement Completed";
 						?>
-                      Payement Completed
-                      
+                     
+                      <a href="Bill.php?id=<?php echo $data['cart_id']?>">Bill</a>
                         <?php 
 					}
 					else if($data["booking_status"]==2 && $data["cart_status"]==3)

@@ -15,11 +15,14 @@ session_start();
         <tr>
             <td>#</td>
             <td>Chat</td>
+           
             <td>Date</td>
             <td>Action</td>
         </tr>
         <?php
+
         $selChat="select * from tbl_chatlist where from_id='".$_SESSION['uid']."' or to_id='".$_SESSION['uid']."'";
+        
         $res=$con->query($selChat);
         $i=0;
                 while($data=$res->fetch_assoc())

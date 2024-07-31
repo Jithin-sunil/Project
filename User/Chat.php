@@ -38,7 +38,7 @@ $sel = "select * from tbl_user where user_id ='".$_GET["id"]."'";
                     <div class="nav-start">
                         <div class="recipient-block">
                             <div class="avatar-container">
-                                <img class="user-avatar" src="../Assets/Files/UserDocs/Photo/<?php echo $row["user_photo"] ?>" alt="">
+                                <img class="user-avatar" src="../Assets/Files/UserDocs/<?php echo $row["user_photo"] ?>" alt="">
                             </div>
                             <div class="username">
                                 <span><?php echo $row["user_name"] ?></span>

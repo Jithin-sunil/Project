@@ -28,7 +28,7 @@ include('Header.php');
         </tr>
         <tr>
             <?php
-		$selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on u.user_id=r.user_id where buyer_id=".$_SESSION['uid'];
+		 $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on u.user_id=r.user_id where buyer_id=".$_SESSION['uid'];
 		 $result=$con->query($selqurey);
         $i=0;
         while($data=$result->fetch_assoc())
@@ -60,7 +60,7 @@ include('Header.php');
                         {
                             echo "Booked";
                             ?>
-                            <a href="">Chat</a>
+                            <a href="Chat.php?id=<?php echo $data['user_id']?>">Chat</a>
                             <?php
 
                         }

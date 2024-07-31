@@ -14,7 +14,7 @@ ob_start();
                                 ?>
                     <script>
                     // alert('Payment Completed');
-                        window.location="Loader.php";
+                        window.location="Loader.php?id=<?php echo $_SESSION['bid']?>";
                         </script>
                     <?php
                             }

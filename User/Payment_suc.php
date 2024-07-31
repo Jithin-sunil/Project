@@ -237,7 +237,7 @@
       function Redirect()
       {
           window.setTimeout(function() {
-          window.location = "Homepage.php";
+          window.location = "Bill.php";
         }, 5000);
       }
       </script>
