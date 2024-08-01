@@ -1,6 +1,5 @@
  <?php
  include('../Assets/Connection/Connection.php');
-session_start();
 include('Header.php');
 
 if(isset($_POST['txtsubmit']))
@@ -21,8 +20,8 @@ if(isset($_GET["delID"]))
 	$delQry="delete from tbl_mobile where mobile_id=$mobileId";
     if($con -> query($delQry))
 	{
-		echo"deleted";
-		header("location:Mobile.php");
+		// echo"deleted";
+		// header("location:Mobile.php");
 	}
 }
 ?>

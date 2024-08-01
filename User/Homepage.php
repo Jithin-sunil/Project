@@ -32,7 +32,9 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -56,7 +58,8 @@ session_start();
                         <div class="full">
                             <div class="center-desk">
                                 <div class="logo">
-                                    <a href="index.html"><img src="../Assets/Templates/Main/images/logo.png" alt="#"></a>
+                                    <a href="index.html"><img src="../Assets/Templates/Main/images/logo.png"
+                                            alt="#"></a>
                                 </div>
                             </div>
                         </div>
@@ -66,24 +69,29 @@ session_start();
                             <div class="limit-box">
                                 <nav class="main-menu">
                                     <ul class="menu-area-main">
-                                        
-                                        <li> <a href="HomePage.php">HomePage</a> </li>
-                                        <li> <a href="SearchProduct.php">Search</a> </li>
-                                        
-                
+
+                                        <li> <a href="HomePage.php"><i class="fa-solid fa-house"></i></a> </li>
+
+
                                         <li><a href="MobileComparison.php">Mobile Comparison</a></li>
-                                        <li><a href="MyProfile.php">MyProfile</a></li>
+
                                         <li><a href="UsedPhone.php">Phone Selling</a></li>
                                         <li><a href="ViewUsedPhone.php">Buy Used Phones</a></li>
-                                        <li><a href="Servicebooking.php">Service Center</a></li>
+                                        <li><a href="ViewServiceCenter.php">Service Center</a></li>
+                                        <li><a href="Servicebooking.php">Service Bookings</a></li>
                                         <li><a href="MyBooking.php">My Booking</a></li>
                                         <li><a href="UsedPhoneBookings.php">Used Phone Booking</a></li>
                                         <li><a href="MyPhone_sell.php">MyPhone</a></li>
-                                        <li><a href="ChatList.php">Chat List</a></li>
-                                        <li><a href="Mycart.php">My Cart</a></li>
-                                        <li class="last">
-                                            <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
+                                        <li><a href="MyProfile.php"><i class="fa-regular fa-user"></a></i></li>
+                                        <li><a href="ChatList.php"><i class="fa-brands fa-facebook-messenger"></i></a>
                                         </li>
+                                        <li><a href="Mycart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                        <li class="last">
+                                            <a href="SearchProduct.php"> <img
+                                                    src="../Assets/Templates/Main/images/search_icon.png"
+                                                    alt="icon" /></a>
+                                        </li>
+                                        <li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -97,7 +105,7 @@ session_start();
                                 <li><img src="../Assets/Templates/Main/icon/loc.png" />Location</li>
                             </ul>
                         </div>
-                    </div>--> 
+                    </div>-->
                 </div>
             </div>
         </div>
@@ -111,8 +119,8 @@ session_start();
                     <img class="first-slide" src="../Assets/Templates/Main/images/banner.jpg" alt="First slide">
                     <div class="container">
                         <div class="carousel-caption relative">
-                        <span> Your Gateway<br>To the latest In<br>Mobile Technology</span>
-                        <p>"Innovative Mobiles,Unbeatable Prices"</p>
+                            <span> Your Gateway<br>To the latest In<br>Mobile Technology</span>
+                            <p>"Innovative Mobiles,Unbeatable Prices"</p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -129,7 +137,7 @@ session_start();
                             <span>The Ultimate Shopping Companion </span>
                             <h1>Stay Ahead with the Best Mobile Technology!</h1>
                             <p>"Discover the Best Phones at the Best Prices!
-                            Compare Features and Make Informed Choices"</p>
+                                Compare Features and Make Informed Choices"</p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -146,7 +154,8 @@ session_start();
                             <span>All New Phones </span>
                             <h1>up to 25% Flat Sale</h1>
                             <p>It is a long established fact that a reader will be distracted by the readable content
-                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that</p>
+                                <br> of a page when looking at its layout. The point of using Lorem Ipsum is that
+                            </p>
                             <a class="buynow" href="#">Buy Now</a>
                             <ul class="social_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -179,13 +188,16 @@ session_start();
                     <div class="about_box">
                         <h3>About Us</h3>
                         <span>Our Mobile Shop</span>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of It is a long established fact that a reader will be distracted by the </p>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                            page when looking at its layout. The point of It is a long established fact that a reader
+                            will be distracted by the readable content of a page when looking at its layout. The point
+                            of It is a long established fact that a reader will be distracted by the </p>
 
                     </div>
-               
+
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <!-- end about -->
 
@@ -208,10 +220,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/1.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -219,10 +231,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/2.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 margin">
@@ -230,10 +242,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/3.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
@@ -241,10 +253,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/4.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
@@ -252,10 +264,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/5.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mrgn">
@@ -263,10 +275,10 @@ session_start();
                             <img src="../Assets/Templates/Main/images/6.png" alt="img" />
                             <h3>$<strong class="red">100</strong></h3>
                             <span>Mobile Phone</span>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
-                            <i><img src="../Assets/Templates/Main/images/star.png"/></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
+                            <i><img src="../Assets/Templates/Main/images/star.png" /></i>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -308,7 +320,10 @@ session_start();
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
                                         <img src="../Assets/Templates/Main/icon/testimonial_qoute.png">
@@ -326,7 +341,10 @@ session_start();
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
                                         <img src="../Assets/Templates/Main/icon/testimonial_qoute.png">
@@ -345,7 +363,10 @@ session_start();
                             <div class="full testimonial_cont text_align_center cross_layout">
                                 <div class="cross_inner">
                                     <h3>Due markes<br><strong class="ornage_color">Rental</strong></h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit ess</i>
                                     </p>
                                     <div class="full text_align_center margin_top_30">
                                         <img src="../Assets/Templates/Main/icon/testimonial_qoute.png">
@@ -406,7 +427,8 @@ session_start();
                                 <h3>Address</h3>
                                 <span>Healing Center, 176 W Streetname,New York, NY 10014, US</span>
                                 <p>(+71) 8522369417
-                                    <br>demo@gmail.com</p>
+                                    <br>demo@gmail.com
+                                </p>
                             </div>
                             <ul class="location_icon">
                                 <li> <a href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -418,9 +440,9 @@ session_start();
                                 <ul class="link">
                                     <li> <a href="#">Home</a></li>
                                     <li> <a href="#">About</a></li>
-                                    
+
                                     <li> <a href="#">Brand </a></li>
-                                    <li> <a href="#">Specials  </a></li>
+                                    <li> <a href="#">Specials </a></li>
                                     <li> <a href="#"> Contact us</a></li>
                                 </ul>
                             </div>
@@ -449,16 +471,16 @@ session_start();
     <script src="../Assets/Templates/Main/js/owl.carousel.js"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $(".fancybox").fancybox({
                 openEffect: "none",
                 closeEffect: "none"
             });
 
-            $(".zoom").hover(function() {
+            $(".zoom").hover(function () {
 
                 $(this).addClass('transition');
-            }, function() {
+            }, function () {
 
                 $(this).removeClass('transition');
             });

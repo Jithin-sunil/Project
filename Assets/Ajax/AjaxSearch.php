@@ -20,6 +20,7 @@ include("../Connection/Connection.php");
   Color:<?php echo $rows['mobiledetails_color'] ?><br>
   Ram:<?php echo $rows['mobiledetails_ram'] ?><br>
   Storage:<?php echo $rows['mobiledetails_storage'] ?><br>
+  Processor:<?php echo $rows['mobiledetails_processor'] ?><br
   Disply:<?php echo $rows['mobiledetails_display'] ?><br>
   Front Cam:<?php echo $rows['mobiledetails_frontcam'] ?><br>
   Back Cam:<?php echo $rows['mobiledetails_rearcam'] ?><br>

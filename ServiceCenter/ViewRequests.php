@@ -59,7 +59,7 @@ if(isset($_GET["rejID"]))
 <td>Action</td>
 </tr>
 <?php
-$selquery="select * from  tbl_request r inner join tbl_user u on r.user_id=u.user_id inner join tbl_servicetype t on r.servicetype_id=t.servicetype_id   inner join tbl_servicecenter s on t.servicecenter_id=s.servicecenter_id where request_status='0'";
+$selquery="select * from  tbl_request r inner join tbl_user u on r.user_id=u.user_id inner join tbl_servicetype t on r.servicetype_id=t.servicetype_id   inner join tbl_servicecenter s on t.servicecenter_id=s.servicecenter_id where request_status='1'";
 $result=$con->query($selquery);
 $i=0;
 while($data = $result -> fetch_assoc())
@@ -75,8 +75,25 @@ while($data = $result -> fetch_assoc())
     <td><?php echo $data["user_contact"] ?></td>
 
 
-   <td><a href="ViewRequests.php?acpID=<?php echo $data["request_id"]?>">Accept</a>
-   <a href="ViewRequests.php?rejID=<?php echo $data["request_id"]?>">REJECT</a></td>
+   <td><?php
+
+	if($data['request_status']==0)
+	{
+		?>
+		<a href="ViewRequests.php?acpID=<?php echo $data["request_id"]?>">Accept</a>
+		<a href="ViewRequests.php?rejID=<?php echo $data["request_id"]?>">REJECT</a></td>
+		<?php
+	}
+	else if($data['request_status']==1)
+	{
+		?>
+		<a href="">Message</a>
+		<?php
+	}
+
+   ?>
+	
+   
     </tr> 
    
     <?php

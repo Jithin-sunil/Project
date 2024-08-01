@@ -237,7 +237,7 @@
       function Redirect()
       {
           window.setTimeout(function() {
-          window.location = "Bill.php";
+          window.location = "MyBooking.php";
         }, 5000);
       }
       </script>

@@ -2,19 +2,21 @@
 include('../Assets/Connection/Connection.php');
 include('Header.php');
 
-if(isset($_GET['bid']))
+
+if(isset($_GET['id']))
 {
-    $upqry="update tbl_buyusedphone set buy_status=1 where buyphone_id=".$_GET['bid'];
+    $upqry="update tbl_buyusedphone set buy_status=2 where buyphone_id=".$_GET['id'];
     if($con->query($upqry))
     {
         ?>
         <script>
-            alert('Booked');
+            alert('Selled');
             window.location="MyPhone_sell.php";
             </script>
         <?php
     }
 }
+
 
 ?>
 
@@ -42,7 +44,7 @@ if(isset($_GET['bid']))
         </tr>
         <tr>
             <?php
-		 $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on b.buyer_id=r.user_id where u.user_id=".$_SESSION['uid'];
+		  $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on b.buyer_id=r.user_id where u.user_id=".$_SESSION['uid'];
 		 $result=$con->query($selqurey);
         $i=0;
         while($data=$result->fetch_assoc())
@@ -68,22 +70,22 @@ if(isset($_GET['bid']))
                 <?php 
                         if($data['buy_status']==0)
                         {
-                            ?>
-                            <a href="MyPhone_sell.php?bid=<?php echo $data['buyphone_id']?>">Book</a>
-                            <?php
+                           echo "No response";
                         }
                         else if($data['buy_status']==1)
                         {
-                            echo "Booked";
+                           
                             ?>
-                            <a href="Chat.php?id=<?php echo $data['user_id']?>">Chat</a>
+                            <a href="Chat.php?id=<?php echo $data['user_id']?>">Chat</a> |
+                            <a href="MyPhone_sell.php?id=<?php echo $data['buyphone_id']?>">Sold</a>
                             <?php
 
                         }
-                        else if($data['buy_status']==2)
+                        else 
                         {
-                           echo "Sold Out";
+                            echo "Sold";
                         }
+                        
                         
                 ?>
             </td>

@@ -2,6 +2,20 @@
 include('../Assets/Connection/Connection.php');
 include('Header.php');
 
+if(isset($_GET['bid']))
+{
+    $upqry="update tbl_buyusedphone set buy_status=1 where buyphone_id=".$_GET['bid'];
+    if($con->query($upqry))
+    {
+        ?>
+        <script>
+            alert('Booked');
+            window.location="UsedPhoneBookings.php";
+            </script>
+        <?php
+    }
+}
+
 ?>
 
 
@@ -28,7 +42,7 @@ include('Header.php');
         </tr>
         <tr>
             <?php
-		 $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on u.user_id=r.user_id where buyer_id=".$_SESSION['uid'];
+		  $selqurey="select * from tbl_buyusedphone b inner join tbl_usedphone u on b.usedphone_id=u.usedphone_id inner join tbl_user r on u.user_id=r.user_id where b.buyer_id=".$_SESSION['uid'];
 		 $result=$con->query($selqurey);
         $i=0;
         while($data=$result->fetch_assoc())
@@ -54,7 +68,9 @@ include('Header.php');
                 <?php 
                         if($data['buy_status']==0)
                         {
-                            echo "Not Buyed";
+                            ?>
+                            <a href="UsedPhoneBookings.php?bid=<?php echo $data['buyphone_id']?>">Book</a>
+                            <?php
                         }
                         else if($data['buy_status']==1)
                         {
@@ -66,9 +82,7 @@ include('Header.php');
                         }
                         else if($data['buy_status']==2)
                         {
-                            ?>
-                            <a href="">Selled Phone</a>
-                            <?php
+                            echo "Sold Out";
                         }
                         
                 ?>

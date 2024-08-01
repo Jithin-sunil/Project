@@ -69,6 +69,7 @@
                                         <li><a href="ViewRequests.php">View Request </a></li>
                                         <li><a href="AcceptedReq.php">Accepted Request</a></li>
                                         <li><a href="RejectedReq.php">Rejected Request</a></li>
+                                        <li><a href="ServiceType.php">Service Type</a></li>
                                         <li class="last">
                                             <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
                                         </li>

@@ -32,6 +32,9 @@ session_start();
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="../Assets/Templates/Main/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -72,8 +75,10 @@ session_start();
                                 
                                         <li><a href="ViewUserbooking.php">View UserBooking</a></li>
                                         <li><a href="Viewcomment.php">View Comments</a></li>
+                                        <li><a href="Logout.php"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+
                                         <li class="last">
-                                            <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a>
+                                            <!-- <a href="#"><img src="../Assets/Templates/Main/images/search_icon.png" alt="icon" /></a> -->
                                         </li>
                                     </ul>
                                 </nav>
